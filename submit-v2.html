@@ -146,7 +146,7 @@
 
           <div class="field">
             <label for="f-file">전년도 보험증권 <span class="req">*</span></label>
-            <p class="help">※ 파일은 <b>여러 개 첨부 가능</b>하며 <b>합계 최대 20MB까지</b> 올릴 수 있습니다. 20MB를 초과하는 경우에는 <b>관광공제회 이메일로 제출해 주시기 바랍니다.</b> <a href="mailto:kta7491@naver.com">kta7491@naver.com</a></p>
+            <p class="help">※ 파일은 <b>여러 개 첨부 가능</b>하며 <b>합계 최대 20MB까지</b> 올릴 수 있습니다. 20MB를 초과하는 경우에는 <b>관광공제회 이메일로 제출해 주시기 바랍니다.</b> <a href="mailto:ktasb7491@gmail.com">ktasb7491@gmail.com</a></p>
             <label class="drop" for="f-file">
               <input id="f-file" name="file" type="file" accept=".pdf,.jpg,.jpeg,.png,.heic,.hwp,.doc,.docx,.xls,.xlsx,.zip" multiple>
               <span class="drop-text">클릭하거나 파일을 여기로 끌어다 놓으세요</span>
@@ -267,7 +267,7 @@
       if (!el.checkValidity()) { el.classList.add("invalid"); return fail(fields[i][1], el); }
     }
     if (!files.length) { drop.classList.add("invalid"); return fail("전년도 보험증권 파일을 첨부해주세요."); }
-    if (totalBytes() > MAX_BYTES) { drop.classList.add("invalid"); return fail("첨부파일 합계가 20MB를 초과합니다. 일부 파일을 빼시거나 kta7491@naver.com 으로 보내주세요."); }
+    if (totalBytes() > MAX_BYTES) { drop.classList.add("invalid"); return fail("첨부파일 합계가 20MB를 초과합니다. 일부 파일을 빼시거나 ktasb7491@gmail.com 으로 보내주세요."); }
     var agree = form.elements.agree;
     if (!agree.checked) { agree.parentNode.classList.add("invalid"); return fail("개인정보 수집·이용에 동의해주세요.", agree); }
     errBox.hidden = true;
@@ -312,7 +312,7 @@
       done.hidden = false;
       done.scrollIntoView({ behavior: "smooth", block: "center" });
     }).catch(function () {
-      fail("제출 중 오류가 발생했습니다. 잠시 후 다시 시도하시거나 kta7491@naver.com 으로 보내주세요.");
+      fail("제출 중 오류가 발생했습니다. 잠시 후 다시 시도하시거나 ktasb7491@gmail.com 으로 보내주세요.");
       btn.disabled = false;
       btn.textContent = "제출하기";
     });
