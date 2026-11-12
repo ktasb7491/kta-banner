@@ -5,15 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>관광공제회 배너</title>
 <style>
-  body { margin:0; padding:32px 16px; background:#f4f7fb; color:#1a2233; font-family:-apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
-  main { max-width:680px; margin:0 auto; }
+  body { margin:0; padding:32px 16px; background:#f4f7fb; color:#1a2233; font-family:"Pretendard", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+  main { max-width:760px; margin:0 auto; }
   h1 { font-size:22px; margin:0 0 24px; }
   section { background:#fff; border-radius:12px; padding:20px; margin-bottom:20px; box-shadow:0 1px 3px rgba(0,0,0,.06); }
   h2 { font-size:17px; margin:0 0 6px; }
-  p { font-size:14px; line-height:1.6; margin:0 0 14px; color:#4a5568; }
+  p, li { font-size:14px; line-height:1.6; color:#4a5568; }
+  p { margin:0 0 14px; }
+  ul { margin:0 0 14px; padding-left:20px; }
   iframe { width:100%; border:0; display:block; }
-  a { color:#0B4FB3; }
+  a { color:#0B4FB3; word-break:break-all; }
   p.note { font-size:13px; color:#718096; margin-top:-8px; }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin:0 0 14px; }
+  th, td { text-align:left; padding:8px 6px; border-bottom:1px solid #e6ebf2; vertical-align:top; }
+  th { color:#1a2233; background:#f7f9fc; }
+  details { margin-top:14px; }
+  summary { cursor:pointer; font-size:14px; font-weight:600; color:#0B4FB3; }
+  pre { background:#0f1729; color:#e6edf7; padding:14px; border-radius:8px; overflow-x:auto; font-size:12px; line-height:1.5; white-space:pre-wrap; word-break:break-all; }
 </style>
 </head>
 <body>
@@ -21,28 +29,69 @@
   <h1>관광공제회 호텔보험 배너</h1>
 
   <section>
+    <h2>개발자 · 유지보수 업체 전달용 안내</h2>
+    <p>이 페이지 주소(<a href="https://ktasb7491.github.io/kta-banner/">https://ktasb7491.github.io/kta-banner/</a>)만 전달하면 됩니다. 각 배너의 미리보기, 이미지 주소, 붙여넣기용 코드가 모두 아래에 있습니다.</p>
+    <table>
+      <thead><tr><th>배너</th><th>이미지 크기</th><th>이미지 주소</th><th>코드 페이지</th></tr></thead>
+      <tbody>
+        <tr><td>가로형 네이비 (896×500)</td><td>1792×1000 (896×500으로 표시)</td><td><a href="images/web_banner_896x500_navy@2x.jpg" target="_blank">https://ktasb7491.github.io/kta-banner/images/web_banner_896x500_navy@2x.jpg</a></td><td><a href="web-banner-896-navy.html" target="_blank">web-banner-896-navy.html</a></td></tr>
+        <tr><td>가로형 라이트 (896×500)</td><td>1792×1000 (896×500으로 표시)</td><td><a href="images/web_banner_896x500@2x.jpg" target="_blank">https://ktasb7491.github.io/kta-banner/images/web_banner_896x500@2x.jpg</a></td><td><a href="web-banner-896.html" target="_blank">web-banner-896.html</a></td></tr>
+        <tr><td>정사각형</td><td>1254×1254 (최대 440px로 표시)</td><td><a href="images/web_banner.jpg" target="_blank">https://ktasb7491.github.io/kta-banner/images/web_banner.jpg</a></td><td><a href="web-banner.html" target="_blank">web-banner.html</a></td></tr>
+        <tr><td>이메일 배너 (600px)</td><td>600px 폭, 이미지 7장 조합</td><td>images/banner_top.jpg 외</td><td><a href="email-banner.html" target="_blank">email-banner.html</a></td></tr>
+      </tbody>
+    </table>
+    <p><b>버튼 연결 주소 (모든 배너 공통)</b></p>
+    <ul>
+      <li>전년도 증권 제출하기 → <a href="https://ktasb7491.github.io/kta-banner/submit-v2.html" target="_blank">https://ktasb7491.github.io/kta-banner/submit-v2.html</a></li>
+      <li>간편 상담 신청하기 → <a href="https://ktasb7491.github.io/kta-banner/consult-v2.html" target="_blank">https://ktasb7491.github.io/kta-banner/consult-v2.html</a></li>
+    </ul>
+    <p><b>적용 시 참고사항</b></p>
+    <ul>
+      <li>배너 한 장에 버튼이 2개라, 이미지 위에 투명 클릭 영역(&lt;a&gt;)을 % 단위로 얹는 방식입니다. 배너 크기를 줄이거나 늘려도 클릭 영역이 자동으로 맞습니다. <b>배너 크기는 <code>max-width</code> 값만 바꿔주세요.</b></li>
+      <li>팝업·배너 관리 기능이 <b>“이미지 1장 + 링크 1개”만 지원</b>하는 경우, 코드 대신 이미지만 등록하면 버튼 하나만 연결됩니다. 이때는 HTML(코드) 입력 방식으로 등록하거나, 이미지맵을 사용하도록 요청하세요.</li>
+      <li>팝업의 닫기 버튼·“오늘 하루 보지 않기”는 홈페이지 쪽 팝업 기능을 그대로 사용하면 됩니다.</li>
+      <li>이미지는 현재 이 GitHub Pages에서 제공됩니다. 업체 서버에 이미지를 직접 올려 쓰는 경우, 코드의 <code>&lt;img src="..."&gt;</code> 주소만 바꾸면 됩니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>홈페이지 배너 · 가로형 네이비 (896×500)</h2>
+    <p>메인 비주얼·슬라이드 배너 영역용. 홈페이지 메인 배너(파란 배경 영역)와 같은 톤입니다. 아래 코드를 홈페이지 HTML의 원하는 위치에 붙여넣으면 됩니다. 이미지만 필요하면 <a href="images/web_banner_896x500_navy@2x.jpg" target="_blank">이미지 파일</a>을 사용하세요.</p>
+    <iframe src="web-banner-896-navy.html" style="aspect-ratio:896/500;" title="홈페이지 배너 · 가로형 네이비 (896×500) 미리보기"></iframe>
+    <details><summary>코드 보기 (복사해서 사용)</summary><pre><code>&lt;div class=&quot;kta-banner&quot; style=&quot;position:relative; width:100%; max-width:896px; margin:0 auto; line-height:0;&quot;&gt;
+  &lt;img src=&quot;https://ktasb7491.github.io/kta-banner/images/web_banner_896x500_navy@2x.jpg&quot; width=&quot;896&quot; height=&quot;500&quot; alt=&quot;어려운 호텔보험, 이제 관광공제회로 - 매년 갱신하는 호텔종합보험, 갱신 전 한 번 비교해보세요. 관광공제회 견적 진행 시 전년 대비 공제료 최대 20% 인하&quot; style=&quot;display:block; width:100%; height:auto; border:0;&quot;&gt;
+  &lt;a href=&quot;https://ktasb7491.github.io/kta-banner/submit-v2.html&quot; target=&quot;_blank&quot; aria-label=&quot;전년도 증권 제출하기&quot; title=&quot;전년도 증권 제출하기&quot; style=&quot;position:absolute; left:5.36%; top:65.04%; width:26.34%; height:10.80%; border-radius:999px; display:block;&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://ktasb7491.github.io/kta-banner/consult-v2.html&quot; target=&quot;_blank&quot; aria-label=&quot;간편 상담 신청하기&quot; title=&quot;간편 상담 신청하기&quot; style=&quot;position:absolute; left:33.04%; top:65.04%; width:26.34%; height:10.80%; border-radius:999px; display:block;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre></details>
+  </section>
+
+  <section>
+    <h2>홈페이지 배너 · 가로형 라이트 (896×500)</h2>
+    <p>밝은 배경의 배너 영역 또는 팝업용. 아래 코드를 홈페이지 HTML의 원하는 위치에 붙여넣으면 됩니다. 이미지만 필요하면 <a href="images/web_banner_896x500@2x.jpg" target="_blank">이미지 파일</a>을 사용하세요.</p>
+    <iframe src="web-banner-896.html" style="aspect-ratio:896/500;" title="홈페이지 배너 · 가로형 라이트 (896×500) 미리보기"></iframe>
+    <details><summary>코드 보기 (복사해서 사용)</summary><pre><code>&lt;div class=&quot;kta-banner&quot; style=&quot;position:relative; width:100%; max-width:896px; margin:0 auto; line-height:0;&quot;&gt;
+  &lt;img src=&quot;https://ktasb7491.github.io/kta-banner/images/web_banner_896x500@2x.jpg&quot; width=&quot;896&quot; height=&quot;500&quot; alt=&quot;어려운 호텔보험, 이제 관광공제회로 - 매년 갱신하는 호텔종합보험, 갱신 전 한 번 비교해보세요. 관광공제회 견적 진행 시 전년 대비 공제료 최대 20% 인하&quot; style=&quot;display:block; width:100%; height:auto; border:0;&quot;&gt;
+  &lt;a href=&quot;https://ktasb7491.github.io/kta-banner/submit-v2.html&quot; target=&quot;_blank&quot; aria-label=&quot;전년도 증권 제출하기&quot; title=&quot;전년도 증권 제출하기&quot; style=&quot;position:absolute; left:4.58%; top:70.72%; width:27.12%; height:11.20%; border-radius:999px; display:block;&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://ktasb7491.github.io/kta-banner/consult-v2.html&quot; target=&quot;_blank&quot; aria-label=&quot;간편 상담 신청하기&quot; title=&quot;간편 상담 신청하기&quot; style=&quot;position:absolute; left:33.04%; top:70.72%; width:27.12%; height:11.20%; border-radius:999px; display:block;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre></details>
+  </section>
+
+  <section>
+    <h2>홈페이지 배너 · 정사각형</h2>
+    <p>팝업·사이드 배너·모바일용. 아래 코드를 홈페이지 HTML의 원하는 위치에 붙여넣으면 됩니다. 이미지만 필요하면 <a href="images/web_banner.jpg" target="_blank">이미지 파일</a>을 사용하세요.</p>
+    <iframe src="web-banner.html" style="aspect-ratio:1/1; max-width:440px; margin:0 auto;" title="홈페이지 배너 · 정사각형 미리보기"></iframe>
+    <details><summary>코드 보기 (복사해서 사용)</summary><pre><code>&lt;div class=&quot;kta-banner&quot; style=&quot;position:relative; width:100%; max-width:440px; margin:0 auto; line-height:0;&quot;&gt;
+  &lt;img src=&quot;https://ktasb7491.github.io/kta-banner/images/web_banner.jpg&quot; width=&quot;1254&quot; height=&quot;1254&quot; alt=&quot;한국관광협회중앙회 관광공제회 | 어려운 호텔보험, 이제 관광공제회로 - 매년 갱신하는 호텔종합보험, 갱신 전 한 번 비교해보세요. 관광공제회 견적 진행 시 전년 대비 공제료 최대 20% 인하&quot; style=&quot;display:block; width:100%; height:auto; border:0;&quot;&gt;
+  &lt;a href=&quot;https://ktasb7491.github.io/kta-banner/submit-v2.html&quot; target=&quot;_blank&quot; aria-label=&quot;전년도 증권 제출하기&quot; title=&quot;전년도 증권 제출하기&quot; style=&quot;position:absolute; left:9.73%; top:77.51%; width:39.39%; height:8.61%; border-radius:999px; display:block;&quot;&gt;&lt;/a&gt;
+  &lt;a href=&quot;https://ktasb7491.github.io/kta-banner/consult-v2.html&quot; target=&quot;_blank&quot; aria-label=&quot;간편 상담 신청하기&quot; title=&quot;간편 상담 신청하기&quot; style=&quot;position:absolute; left:50.88%; top:77.51%; width:39.39%; height:8.61%; border-radius:999px; display:block;&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;</code></pre></details>
+  </section>
+
+  <section>
     <h2>이메일 배너 (가로형)</h2>
     <p><a href="email-banner.html" target="_blank">email-banner.html</a>을 열고 배너를 전체 선택(Ctrl+A) → 복사(Ctrl+C) → 메일 본문에 붙여넣기(Ctrl+V) 하세요. HTML 편집이 되는 발송 툴이라면 소스의 &lt;table&gt; 부분을 붙여넣으면 됩니다.</p>
     <p class="note">※ Mac 사용 시: 전체 선택(⌘A) → 복사(⌘C) → 붙여넣기(⌘V)</p>
     <iframe src="email-banner.html" style="height:215px;" title="이메일 배너 미리보기"></iframe>
-  </section>
-
-  <section>
-    <h2>홈페이지 배너 896×500 (네이비)</h2>
-    <p><a href="web-banner-896-navy.html" target="_blank">web-banner-896-navy.html</a> 소스의 &lt;div class="kta-banner"&gt; 부분을 홈페이지 HTML에 붙여넣으세요. 이미지만 필요하면 <a href="images/web_banner_896x500_navy@2x.jpg" target="_blank">이미지 파일</a>을 사용하세요.</p>
-    <iframe src="web-banner-896-navy.html" style="aspect-ratio:896/500;" title="홈페이지 배너 896×500 네이비 미리보기"></iframe>
-  </section>
-
-  <section>
-    <h2>홈페이지 배너 896×500 (라이트)</h2>
-    <p><a href="web-banner-896.html" target="_blank">web-banner-896.html</a> 소스의 &lt;div class="kta-banner"&gt; 부분을 홈페이지 HTML에 붙여넣으세요. 이미지만 필요하면 <a href="images/web_banner_896x500@2x.jpg" target="_blank">이미지 파일</a>을 사용하세요.</p>
-    <iframe src="web-banner-896.html" style="aspect-ratio:896/500;" title="홈페이지 배너 896×500 라이트 미리보기"></iframe>
-  </section>
-
-  <section>
-    <h2>홈페이지 배너 (정사각형)</h2>
-    <p><a href="web-banner.html" target="_blank">web-banner.html</a> 소스의 &lt;div class="kta-banner"&gt; 부분을 홈페이지 HTML에 붙여넣으세요.</p>
-    <iframe src="web-banner.html" style="height:450px;" title="홈페이지 배너 미리보기"></iframe>
   </section>
 
   <section>
